@@ -13,7 +13,7 @@ function Home() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="WatchList">WatchList</Link>
+              <Link to="/WatchList">WatchList</Link>
             </li>
           </ul>
         </nav>
