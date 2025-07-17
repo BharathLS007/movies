@@ -1,12 +1,11 @@
-import React from 'react'
-import Home from './Home'
+import React from 'react';
 
 function WatchList() {
   return (
     <div>
-      <Home/>
+      <h1>Your WatchList</h1>
     </div>
-  )
+  );
 }
 
-export default WatchList
+export default WatchList;

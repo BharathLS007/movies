@@ -1,24 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import Banner from './Banner'
+
 function Home() {
   return (
     <div>
-      <main>
-        <nav className="Navbar">
-          <div className="logo">
-            <span>Movie Now</span>
-          </div>
-          <ul className="menu">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/WatchList">WatchList</Link>
-            </li>
-          </ul>
-        </nav>
-      </main>
+        <Banner />
+      <h1>hello</h1>
     </div>
-  );
+  )
 }
-export default Home;
+
+export default Home
