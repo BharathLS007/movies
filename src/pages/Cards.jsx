@@ -3,9 +3,9 @@ import React from "react";
 function Cards() {
   return (
     <div className="container my-3">
-      <h1 className="Trend">Trending Movie</h1>
+
       <div
-        className="card bg-dark text-white shadow rounded"
+        className="card bg-dark text-white shadow rounded "
         style={{ width: "14rem" }}
       >
         <img
@@ -20,7 +20,10 @@ function Cards() {
           }}
         />
       </div>
+      
     </div>
+    
+    
   );
 }
 
