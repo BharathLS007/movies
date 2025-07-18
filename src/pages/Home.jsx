@@ -11,6 +11,9 @@ function Home() {
         <Cards />
         <Cards />
         <Cards />
+        <Cards />
+        <Cards />
+  
       </div>
     </div>
   );

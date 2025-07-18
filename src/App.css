@@ -85,6 +85,6 @@
 .moviecards{
   display: flex;
   flex-direction: row;
-  gap: 3%;
-  flex: 0 0 calc(100% /6-3%);
+  gap: 5%;
+  margin-left: 2%;
 }
