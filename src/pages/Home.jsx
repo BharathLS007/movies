@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
         <Banner />
-      <h1>hello</h1>
+       
     </div>
   )
 }
