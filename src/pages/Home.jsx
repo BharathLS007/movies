@@ -7,7 +7,7 @@ function Home() {
     <div>
       <Banner />
       <h1 className="Trend">Trending Movie</h1>
-      <div className="moviecards">
+      <div className="moviecards d-flex align-items-end justify-content-center border">
         <Cards />
         <Cards />
         <Cards />
