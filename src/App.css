@@ -65,3 +65,19 @@
   font-weight: bold;
 }
 
+
+/* Cards of The movie
+
+.card img{
+  margin: 5%;
+  height: 400px;
+  max-height: auto;
+  border-radius: 2rem;
+}
+  */
+
+.Trend{
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}  
