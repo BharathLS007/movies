@@ -82,10 +82,21 @@
   margin: 2%;
 }  
 
-.moviecards{
-  display: flex;
-  flex-direction: row;
-  gap: 2%;
-  margin-left: 3%;
- 
+.container{
+  width: 50vh;
+  height: 50vh;
+}
+
+.card img{
+  display: inline-block;
+  width: 250px;
+  border-radius: 2rem;
+  margin-left: 6%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover{
+  transform: scale(1.2);
 }
