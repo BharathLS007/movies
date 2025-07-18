@@ -8,9 +8,14 @@ function Home() {
       <Banner />
       <h1 className="Trend">Trending Movie</h1>
 
-      
-      < Cards/>
-
+      <div className="moviecontainer">
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+      </div>
     </div>
   );
 }
