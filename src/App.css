@@ -40,3 +40,13 @@
 .menu li a:hover {
   color: #f5c518;
 }
+
+.Titleimg img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 800px;
+
+}
+

@@ -2,8 +2,8 @@ import React from 'react'
 
 function Banner() {
   return (
-    <div>
-      <img src="https://tse2.mm.bing.net/th/id/OIP.qxHDGj3wzCnDTcJL8D2P5AHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="img" />
+    <div className='Titleimg'>
+      <img src="https://images.alphacoders.com/111/1119553.jpg" alt="img" />
     </div>
   )
 }
