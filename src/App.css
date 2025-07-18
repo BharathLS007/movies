@@ -40,13 +40,28 @@
 .menu li a:hover {
   color: #f5c518;
 }
-
+.Titleimg{
+  position: relative;
+  width: 100%;
+  max-height: 800px;
+  overflow: hidden;
+}
 .Titleimg img{
-  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 800px;
+  display: block;
+}
 
+.Titleimgtext{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);  
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
