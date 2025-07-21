@@ -17,3 +17,6 @@ function App() {
 }
 
 export default App;
+
+//       API KEY
+// https://api.themoviedb.org/3/genre/movie/list?api_key=33ff229658ca96598dadc46544c1e142&language=en
