@@ -4,20 +4,23 @@ import Cards from "./Cards";
 import axios from "axios";
 
 function Home() {
-  return (
+ 
 useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await axios.get('https://api.example.com/data'); // replace with your real API
-      console.log(res.data); // access the actual data from response
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
-  fetchData();
+  axios
+    .get(
+      'https://api.themoviedb.org/3/genre/movie/list?api_key=33ff229658ca96598dadc46544c1e142&language=en'
+    )
+    .then(function (res) {
+      console.log(res.data); // Only logs the actual genre data
+    })
+    .catch(function (error) {
+      console.error('Error fetching genres:', error.message); // Cleaner error message
+    });
 }, []);
 
+
+
+  return (
     <div>
       
       <Banner />
