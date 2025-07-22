@@ -25,6 +25,7 @@ function Home() {
       )
       .then((res) => {
         setMovie(res.data.results);
+        //console.log(res.data.results);
       })
       .catch((error) => {
         console.error("Error fetching Movies:", error.message);
@@ -41,7 +42,7 @@ function Home() {
           <Cards
             key={movieObj.id}
             poster_path={movieObj.poster_path}
-            name={movieObj.original_name || movieObj.name}
+            name={movieObj.title || movieObj.name}   // if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
           />
         ))}
       </div>
