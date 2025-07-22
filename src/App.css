@@ -84,10 +84,10 @@
 }  
 
 .container{
-  width: 30vh;
+  width: 32vh;
   height: 50vh;
   text-align: center;
-  padding: 8px;
+  padding: 6px;
 }
 
 .card{
@@ -97,13 +97,13 @@
 }
 .card img{
   display: inline-block;
-  width: 250px;
+  width: 270px;
   border-radius: 2rem;
   margin-left: 2%;
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.3s ease;
-  gap: 2%;
+  gap: 1%;
 }
 
 .card img:hover{
