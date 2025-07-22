@@ -8,6 +8,7 @@
 
 .Navbar {
   display: flex;
+   /*   flex-wrap: wrap; add to check for all display*/
   justify-content: space-between;
   align-items: center;
   background-color: #1e1e1e;
