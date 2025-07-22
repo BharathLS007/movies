@@ -8,10 +8,10 @@ function Home() {
 useEffect(() => {
   axios
     .get(
-      'https://api.themoviedb.org/3/genre/movie/list?api_key=33ff229658ca96598dadc46544c1e142&language=en'
+      'https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en'
     )
     .then(function (res) {
-      console.log(res.data); // Only logs the actual genre data
+      console.log(res.data.results); // Only logs the actual genre data
     })
     .catch(function (error) {
       console.error('Error fetching genres:', error.message); // Cleaner error message
@@ -35,3 +35,6 @@ useEffect(() => {
 }
 
 export default Home;
+
+
+// second api credit      ffbc70b1b2dd54b62933e5b8953c56a7

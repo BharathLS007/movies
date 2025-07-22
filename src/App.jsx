@@ -18,5 +18,9 @@ function App() {
 
 export default App;
 
-//       API KEY
+//      first  API KEY
 // https://api.themoviedb.org/3/genre/movie/list?api_key=33ff229658ca96598dadc46544c1e142&language=en
+
+
+// tv api second one
+//https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en
