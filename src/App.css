@@ -133,3 +133,26 @@
   font-size: 1rem;
   z-index: 1;
 }
+
+
+/* page handler*/
+
+.pagebox{
+display: flex;
+justify-content: center;
+margin-bottom: 2%;
+font-size: x-large;
+}
+
+.page{
+  font-weight: bold;
+}
+.leftarrow{
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+.rightarrow{
+  margin-left: 2%;
+  cursor: pointer;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
 import Cards from "./Cards";
 import axios from "axios";
+import Pagehandle from "./Pagehandle";
 
 function Home() {
   const [movie, setmovie] = useState([]);
@@ -29,6 +30,8 @@ function Home() {
           return <Cards poster_path={movieObj.poster_path} name={movieObj.original_name}/>;
         })}
       </div>
+
+      <Pagehandle />
     </div>
   );
 }
