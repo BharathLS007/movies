@@ -98,7 +98,7 @@
 .card img{
   display: inline-block;
   width: 270px;
-  border-radius: 2rem;
+  border-radius: 1rem;
   margin-left: 2%;
   cursor: pointer;
   overflow: hidden;
