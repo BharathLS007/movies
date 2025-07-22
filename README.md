@@ -25,3 +25,16 @@ Live demo coming soon… page is still under construction!
 🚧 "Under Construction" animated placeholder (for watchlist or other sections)
 
 📱 Responsive design for desktop & mobile
+
+🧪 How to Run Locally
+bash
+git clone https://github.com/BharathLS007/netflix-movie-app.git
+cd netflix-movie-app
+npm install
+npm run dev
+🔑 TMDB API Setup
+Create an account at themoviedb.org
+
+Get your API key from the settings
+
+Replace the api_key in your code files with your own
