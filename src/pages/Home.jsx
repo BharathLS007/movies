@@ -26,7 +26,7 @@ function Home() {
 
       <div className="moviecontainer">
         {movie.map((movieObj) => {
-          return <Cards key={movieObj.id} />;
+          return <Cards poster_path={movieObj.poster_path} />;
         })}
       </div>
     </div>
