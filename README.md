@@ -1,12 +1,27 @@
-# React + Vite
+🎬 Movie Website
+A sleek and responsive movie browsing interface built with ReactJS, designed to mimic the visual appeal and UX of Netflix. This project integrates TMDB API to fetch dynamic content including popular TV shows and movie posters, featuring card animations, hover effects, pagination, and title overlays.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Demo
+Live demo coming soon… page is still under construction!
 
-Currently, two official plugins are available:
+🔧 Tech Stack
+⚛️ React JS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎨 CSS (Tailwind / Bootstrap / Custom)
 
-## Expanding the ESLint configuration
+🌐 TMDB API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔄 Axios for data fetching
+
+📦 React Router DOM
+
+🖼️ Features
+🎞️ Movie cards with posters and hover zoom
+
+📝 Overlay titles inside images
+
+🔍 TV show listing with pagination
+
+🚧 "Under Construction" animated placeholder (for watchlist or other sections)
+
+📱 Responsive design for desktop & mobile
