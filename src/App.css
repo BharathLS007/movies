@@ -88,6 +88,9 @@
   height: 50vh;
 }
 
+.card{
+  color: white;
+}
 .card img{
   display: inline-block;
   width: 250px;
@@ -109,4 +112,6 @@
   justify-content: center;
 }
 
-
+.original_name{
+  color: white;
+}

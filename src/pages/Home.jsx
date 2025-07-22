@@ -26,7 +26,7 @@ function Home() {
 
       <div className="moviecontainer">
         {movie.map((movieObj) => {
-          return <Cards poster_path={movieObj.poster_path} />;
+          return <Cards poster_path={movieObj.poster_path} name={movieObj.original_name}/>;
         })}
       </div>
     </div>
@@ -36,3 +36,6 @@ function Home() {
 export default Home;
 
 // second api credit      ffbc70b1b2dd54b62933e5b8953c56a7
+
+
+//original_name
