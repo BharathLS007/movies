@@ -221,11 +221,40 @@ font-size: x-large;
   .card img {
     width: 100%;
     border-radius: 1rem;
-    transform: none !important; /* Disable hover zoom for touch devices */
+    transform: none !important; 
   }
 
   .overlay-text {
     font-size: 0.8rem;
     padding: 2px 6px;
+  }
+}
+
+/*For page Handle*/
+
+@media (max-width: 768px) {
+  .pagebox {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .leftarrow,
+  .rightarrow {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagebox {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .leftarrow,
+  .rightarrow {
+    font-size: 1rem;
   }
 }
