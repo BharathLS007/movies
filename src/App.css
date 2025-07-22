@@ -83,7 +83,7 @@
 }  
 
 .container{
-  width: 50vh;
+  width: 30vh;
   height: 50vh;
 }
 
@@ -91,7 +91,7 @@
   display: inline-block;
   width: 250px;
   border-radius: 2rem;
-  margin-left: 6%;
+  margin-left: 2%;
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -103,6 +103,8 @@
 
 .moviecontainer{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
