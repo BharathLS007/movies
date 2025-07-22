@@ -86,10 +86,14 @@
 .container{
   width: 30vh;
   height: 50vh;
+  text-align: center;
+  padding: 8px;
 }
 
 .card{
   color: white;
+  width: 100%;
+  font-size: 1.25rem;
 }
 .card img{
   display: inline-block;
