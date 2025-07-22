@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en&page=3"
+        "https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en&page=1"
       )
       .then(function (res) {
         setmovie(res.data.results); // Only logs the actual genre data
