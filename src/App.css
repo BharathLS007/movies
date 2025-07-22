@@ -116,6 +116,20 @@
   justify-content: center;
 }
 
-.original_name{
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  z-index: 1;
 }
