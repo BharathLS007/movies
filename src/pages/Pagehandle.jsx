@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Pagehandle() {
+function Pagehandle({handlePrev,handleNext,page}) {
   return (
     <div className='pagebox'>
-      <div className="leftarrow"><i class="fa-solid fa-arrow-left"></i></div>
-      <div className="page">1</div>
-      <div className="rightarrow"><i class="fa-solid fa-arrow-right"></i></div>
+      <div onClick={handlePrev} className="leftarrow"><i class="fa-solid fa-arrow-left"></i></div>
+      <div className="page">{page}</div>
+      <div onClick={handleNext} className="rightarrow"><i class="fa-solid fa-arrow-right"></i></div>
     </div>
   )
 }

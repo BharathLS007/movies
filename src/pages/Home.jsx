@@ -5,33 +5,50 @@ import axios from "axios";
 import Pagehandle from "./Pagehandle";
 
 function Home() {
-  const [movie, setmovie] = useState([]);
+  const [movie, setMovie] = useState([]);
+  const [page, setPage] = useState(1);
+
+  const handlePrev = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
+
+  const handleNext = () => {
+    setPage(page + 1);
+  };
 
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en&page=1"
+        `https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en&page=${page}`
       )
-      .then(function (res) {
-        setmovie(res.data.results); // Only logs the actual genre data
+      .then((res) => {
+        setMovie(res.data.results);
       })
-      .catch(function (error) {
-        console.error("Error fetching genres:", error.message); // Cleaner error message
+      .catch((error) => {
+        console.error("Error fetching TV shows:", error.message);
       });
-  }, []);
+  }, [page]);
 
   return (
     <div>
       <Banner />
-      <h1 className="Trend">Trending Movie</h1>
+      <h1 className="Trend">Trending TV Shows</h1>
 
       <div className="moviecontainer">
-        {movie.map((movieObj) => {
-          return <Cards poster_path={movieObj.poster_path} name={movieObj.original_name}/>;
-        })}
+        {movie.map((movieObj) => (
+          <Cards
+            key={movieObj.id}
+            poster_path={movieObj.poster_path}
+            name={movieObj.original_name || movieObj.name}
+          />
+        ))}
       </div>
 
-      <Pagehandle />
+      <Pagehandle
+        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext}
+      />
     </div>
   );
 }
@@ -39,6 +56,5 @@ function Home() {
 export default Home;
 
 // second api credit      ffbc70b1b2dd54b62933e5b8953c56a7
-
 
 //original_name
