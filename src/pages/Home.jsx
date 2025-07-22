@@ -21,20 +21,20 @@ function Home() {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en&page=${page}`
+        `https://api.themoviedb.org/3/trending/movie/day?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en&page=${page}`
       )
       .then((res) => {
         setMovie(res.data.results);
       })
       .catch((error) => {
-        console.error("Error fetching TV shows:", error.message);
+        console.error("Error fetching Movies:", error.message);
       });
   }, [page]);
 
   return (
     <div>
       <Banner />
-      <h1 className="Trend">Trending TV Shows</h1>
+      <h1 className="Trend">Trending Movies</h1>
 
       <div className="moviecontainer">
         {movie.map((movieObj) => (
