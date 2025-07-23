@@ -42,7 +42,9 @@ function Home({handlewatchlist,removefromwatchlit,WatchList}) {
           <Cards
            key={movieObj.id}
            movieObj={movieObj} 
-           handlewatchlist={handlewatchlist} // if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
+           handlewatchlist={handlewatchlist}
+           removefromwatchlit={removefromwatchlit} 
+           WatchList={WatchList                      }// if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
           />
         ))}
       </div>
