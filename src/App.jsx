@@ -3,18 +3,26 @@ import "./App.css";
 import Navbar from "./pages/Navbar";
 import WatchList from "./pages/WatchList";
 import Home from "./pages/Home";
+import { useState } from "react";
 
 function App() {
+  let [WatchList, setwatchlist]=useState([])
+
+  let handlewatchlist=(movieObj)=>{
+     let newwatchlist = [...WatchList,movieObj]
+     setwatchlist(newwatchlist)
+     console.log(newwatchlist)
+  }
   return (
     <BrowserRouter>
       <Navbar /> 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home handlewatchlist={handlewatchlist}/>} />
         <Route path="/WatchList" element={<WatchList />} />
       </Routes>
     </BrowserRouter>
   );
-}
+} 
 
 export default App;
 

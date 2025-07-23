@@ -1,14 +1,15 @@
 import React from "react";
 
 
-function Cards({ poster_path, name }) {
+function Cards({ movieObj,handlewatchlist }) {
+  const{poster_path,title,name}=movieObj
   return (
     <div className="container">
       <div className="card">
-         <div className="emoji-badge"> &#128525;</div>
+         <div onClick={() => handlewatchlist(movieObj)} className="emoji-badge"> &#128525;</div>
         <div className="image-wrapper">
           <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt="img" />
-          <div className="overlay-text">{name}</div>
+          <div className="overlay-text">{title || name}</div>
         </div>
       </div>
     </div>

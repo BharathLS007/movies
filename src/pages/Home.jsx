@@ -4,7 +4,7 @@ import Cards from "./Cards";
 import axios from "axios";
 import Pagehandle from "./Pagehandle";
 
-function Home() {
+function Home({handlewatchlist}) {
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -40,15 +40,15 @@ function Home() {
       <div className="moviecontainer">
         {movie.map((movieObj) => (
           <Cards
-            key={movieObj.id}
-            poster_path={movieObj.poster_path}
-            name={movieObj.title || movieObj.name}   // if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
+           key={movieObj.id}
+           movieObj={movieObj} 
+           handlewatchlist={handlewatchlist} // if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
           />
         ))}
       </div>
 
       <Pagehandle
-        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext}
+        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext} handlewatchlist={handlewatchlist}
       />
     </div>
   );
