@@ -95,6 +95,7 @@
   color: white;
   width: 100%;
   font-size: 1.25rem;
+  position: relative;
 }
 .card img{
   display: inline-block;
@@ -135,6 +136,14 @@
   z-index: 1;
 }
 
+.emoji-badge{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 24px;
+  z-index: 100;
+  cursor: pointer;
+}
 
 /* page handler*/
 
