@@ -250,6 +250,34 @@ button:hover {
     flex-direction: column;
     gap: 0.5rem;
   }
+ .movielist {
+    padding: 10px;
+  }
+
+  .contentbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .Trend {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  img {
+    width: 80px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+
 }
 
 /* For extra small screens */
@@ -268,7 +296,44 @@ button:hover {
     font-size: 0.8rem;
     padding: 2px 6px;
   }
+   .movielist {
+    padding: 5px;
+  }
+
+  .contentbox {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 12px;
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  .Trend {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  button {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
 }
+
+
+
 
 /*For page Handle*/
 
