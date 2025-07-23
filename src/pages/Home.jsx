@@ -4,7 +4,7 @@ import Cards from "./Cards";
 import axios from "axios";
 import Pagehandle from "./Pagehandle";
 
-function Home({handlewatchlist}) {
+function Home({handlewatchlist,removefromwatchlit,WatchList}) {
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -48,7 +48,7 @@ function Home({handlewatchlist}) {
       </div>
 
       <Pagehandle
-        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext} handlewatchlist={handlewatchlist}
+        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext} handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} WatchList={WatchList}
       />
     </div>
   );

@@ -13,11 +13,16 @@ function App() {
      setwatchlist(newwatchlist)
      console.log(newwatchlist)
   }
+    
+  let removefromwatchlit=(movieid)=>{
+    let updatedlist =[WatchList.filter(movie =>movie.id !== movieid)]
+    setwatchlist(updatedlist)
+  }
   return (
     <BrowserRouter>
       <Navbar /> 
       <Routes>
-        <Route path="/" element={<Home handlewatchlist={handlewatchlist}/>} />
+        <Route path="/" element={<Home handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} WatchList={WatchList}/>} />
         <Route path="/WatchList" element={<WatchList />} />
       </Routes>
     </BrowserRouter>
