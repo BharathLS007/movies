@@ -4,7 +4,7 @@ import Cards from "./Cards";
 import axios from "axios";
 import Pagehandle from "./Pagehandle";
 
-function Home({handlewatchlist,removefromwatchlit,WatchList}) {
+function Home({handlewatchlist,removefromwatchlit,List}) {
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -44,13 +44,13 @@ function Home({handlewatchlist,removefromwatchlit,WatchList}) {
            movieObj={movieObj} 
            handlewatchlist={handlewatchlist}
            removefromwatchlit={removefromwatchlit} 
-           WatchList={WatchList}// if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
+           List={List}// if we want to use another api and want to display the title inside the card dont forgot to rename the title to the anyname use console.log  in line 27
           />
         ))}
       </div>
 
       <Pagehandle
-        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext} handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} WatchList={WatchList}
+        page={page}setPage={setPage}handlePrev={handlePrev}handleNext={handleNext} handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} List={List}
       />
     </div>
   );

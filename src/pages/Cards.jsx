@@ -1,11 +1,11 @@
 import React from "react";
 
-function Cards({ movieObj, handlewatchlist, removefromwatchlit, WatchList }) {
+function Cards({ movieObj, handlewatchlist, removefromwatchlit, List }) {
   const { poster_path, title, name } = movieObj;
 
   function doesContain(movieObj) {
-    if (!Array.isArray(WatchList)) return false;
-    return WatchList.some((item) => item.id === movieObj.id);
+    if (!Array.isArray(List)) return false;
+    return List.some((item) => item.id === movieObj.id);
   }
 
   return (

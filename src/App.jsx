@@ -6,29 +6,29 @@ import Home from "./pages/Home";
 import { useState } from "react";
 
 function App() {
-  let [WatchList, setwatchlist]=useState([])
+  let [List, setList] = useState([])
 
-  let handlewatchlist=(movieObj)=>{
-     let newwatchlist = [...WatchList,movieObj]
-     setwatchlist(newwatchlist)
-     console.log(newwatchlist)
+  let handlewatchlist = (movieObj) => {
+    let newList = [...List, movieObj]
+    setList(newList)
+    console.log(newList)
   }
 
   let removefromwatchlit = (movieid) => {
-    let updatedlist = WatchList.filter(movie => movie.id !== movieid);
-    setwatchlist(updatedlist);
+    let updatedlist = List.filter(movie => movie.id !== movieid);
+    setList(updatedlist);
   };
 
   return (
     <BrowserRouter>
-      <Navbar /> 
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} WatchList={WatchList}/>} />
+        <Route path="/" element={<Home handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} List={List} />} />
         <Route path="/WatchList" element={<WatchList />} />
       </Routes>
     </BrowserRouter>
   );
-} 
+}
 
 export default App;
 
