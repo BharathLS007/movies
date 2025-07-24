@@ -6,46 +6,35 @@ import Home from "./pages/Home";
 import { useState } from "react";
 
 function App() {
-  const [watchListData, setWatchListData] = useState([]);
-  const handlewatchlist = (movieObj) => {
-    const newWatchList = [...watchListData, movieObj];
-    setWatchListData(newWatchList);
-    console.log(newWatchList);
-  };
+  let [WatchList, setwatchlist]=useState([])
 
-  const removefromwatchlit = (movieId) => {
-    const updatedList = watchListData.filter((movie) => movie.id !== movieId);
-    setWatchListData(updatedList);
-    console.log(updatedList);
+  let handlewatchlist=(movieObj)=>{
+     let newwatchlist = [...WatchList,movieObj]
+     setwatchlist(newwatchlist)
+     console.log(newwatchlist)
+  }
+
+  let removefromwatchlit = (movieid) => {
+    let updatedlist = WatchList.filter(movie => movie.id !== movieid);
+    setwatchlist(updatedlist);
   };
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar /> 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              handlewatchlist={handlewatchlist}
-              removefromwatchlit={removefromwatchlit}
-              WatchList={watchListData}
-            />
-          }
-        />
-        <Route
-          path="/WatchList"
-          element={<WatchList WatchList={watchListData} />}
-        />
+        <Route path="/" element={<Home handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} WatchList={WatchList}/>} />
+        <Route path="/WatchList" element={<WatchList />} />
       </Routes>
     </BrowserRouter>
   );
-}
+} 
 
 export default App;
 
 //      first  API KEY
 // https://api.themoviedb.org/3/trending/movie/day?api_key=33ff229658ca96598dadc46544c1e142&language=en
+
 
 // tv api second one
 //https://api.themoviedb.org/3/discover/tv?api_key=ffbc70b1b2dd54b62933e5b8953c56a7&language=en

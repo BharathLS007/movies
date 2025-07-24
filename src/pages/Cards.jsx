@@ -1,32 +1,31 @@
 import React from "react";
 
-function Cards({ movieObj, handlewatchlist, removefromwatchlit, watchListData }) {
+function Cards({ movieObj, handlewatchlist, removefromwatchlit, WatchList }) {
   const { poster_path, title, name } = movieObj;
 
   function doesContain(movieObj) {
-    if (!Array.isArray(watchListData)) return false;
-    return watchListData.some((item) => item.id === movieObj.id);
+    if (!Array.isArray(WatchList)) return false;
+    return WatchList.some((item) => item.id === movieObj.id);
   }
 
   return (
     <div className="container">
       <div className="card">
-        {doesContain(movieObj) ? (
-          <div
-            onClick={() => removefromwatchlit(movieObj.id)}
-            className="emoji-badge"
-          >
-            &#10060;
-          </div>
-        ) : (
-          <div
-            onClick={() => handlewatchlist(movieObj)}
-            className="emoji-badge"
-          >
-            &#128525;
-          </div>
-        )}
-
+{doesContain(movieObj) ? (
+  <div
+    onClick={() => removefromwatchlit(movieObj.id)}
+    className="emoji-badge"
+  >
+    &#10060;
+  </div>
+) : (
+  <div
+    onClick={() => handlewatchlist(movieObj)}
+    className="emoji-badge"
+  >
+    &#128525;
+  </div>
+)}
         <div className="image-wrapper">
           <img
             src={`https://image.tmdb.org/t/p/original/${poster_path}`}
@@ -38,4 +37,5 @@ function Cards({ movieObj, handlewatchlist, removefromwatchlit, watchListData })
     </div>
   );
 }
+
 export default Cards;
