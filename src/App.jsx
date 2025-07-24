@@ -10,13 +10,13 @@ function App() {
   const handlewatchlist = (movieObj) => {
     const newWatchList = [...watchListData, movieObj];
     setWatchListData(newWatchList);
-    console.log("Added to WatchList:", newWatchList);
+    console.log(newWatchList);
   };
 
   const removefromwatchlit = (movieId) => {
     const updatedList = watchListData.filter((movie) => movie.id !== movieId);
     setWatchListData(updatedList);
-    console.log("Removed from WatchList:", updatedList);
+    console.log(updatedList);
   };
 
   return (
