@@ -1,17 +1,8 @@
 import React from "react";
 import constructionGif from "../assets/Construction.gif"; // 👈 updated path
 
-function WatchList() {
+function WatchList({ List, removefromwatchlit }) {
   return (
-    // <div style={{ textAlign: 'center', marginTop: '50px' }}>
-    //   <h2>This Page is Under Construction 🚧</h2>
-    //   <img
-    //     src={constructionGif}
-    //     alt="Under Construction"
-    //     style={{ width: '500px', borderRadius: '1rem' }}
-    //   />
-    // </div>
-
     <div className="movielist">
       <div className="contentbox">
         <h1 className="Trend">Movie WatchList</h1>
@@ -22,17 +13,33 @@ function WatchList() {
               <th>Title</th>
               <th>Poster</th>
               <th>Description</th>
-              <th>genre</th>
+              <th>Genre</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <td>1</td>
-            <td>MEGAN 2.0</td>
-            <td><img src="https://image.tmdb.org/t/p/original//4a63rQqIDTrYNdcnTXdPsQyxVLo.jpg" alt="img" /></td>
-            <td>A mind-bending thriller about dreams within dreams.</td>
-            <td>Science Fiction</td>
-            <td><button>Delete</button></td>
+            {List.map((movieObj, index) => {
+              return (
+                <tr key={movieObj.id}>
+                  <td>{index + 1}</td>
+                  <td>{movieObj.title}</td>
+                  <td>
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${movieObj.backdrop_path}`}
+                      alt={movieObj.title}
+                      style={{ width: "100px" }}
+                    />
+                  </td>
+                  <td>{movieObj.overview}</td>
+                  <td>{movieObj.genre_ids ? movieObj.genre_ids.join(", ") : "N/A"}</td>
+                  <td>
+                    <button onClick={() => removefromwatchlit(movieObj.id)}>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

@@ -24,7 +24,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home handlewatchlist={handlewatchlist} removefromwatchlit={removefromwatchlit} List={List} />} />
-        <Route path="/WatchList" element={<WatchList />} />
+        <Route path="/WatchList" element={<WatchList List={List} removefromwatchlit={removefromwatchlit} />} />
       </Routes>
     </BrowserRouter>
   );
