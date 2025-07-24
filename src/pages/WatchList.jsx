@@ -13,7 +13,7 @@ function WatchList({ List, removefromwatchlit }) {
               <th>Title</th>
               <th>Poster</th>
               <th>Description</th>
-              <th>Genre</th>
+              <th>TRP</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -25,13 +25,13 @@ function WatchList({ List, removefromwatchlit }) {
                   <td>{movieObj.title}</td>
                   <td>
                     <img
-                      src={`https://image.tmdb.org/t/p/original${movieObj.backdrop_path}`}
+                      src={`https://image.tmdb.org/t/p/original${movieObj.poster_path}`}
                       alt={movieObj.title}
                       style={{ width: "100px" }}
                     />
                   </td>
                   <td>{movieObj.overview}</td>
-                  <td>{movieObj.genre_ids ? movieObj.genre_ids.join(", ") : "N/A"}</td>
+                  <td>{movieObj.vote_average}</td>
                   <td>
                     <button onClick={() => removefromwatchlit(movieObj.id)}>
                       Delete
