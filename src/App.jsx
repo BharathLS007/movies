@@ -13,11 +13,12 @@ function App() {
      setwatchlist(newwatchlist)
      console.log(newwatchlist)
   }
-    
-  let removefromwatchlit=(movieid)=>{
-    let updatedlist =[WatchList.filter(movie =>movie.id !== movieid)]
-    setwatchlist(updatedlist)
-  }
+
+  let removefromwatchlit = (movieid) => {
+    let updatedlist = WatchList.filter(movie => movie.id !== movieid);
+    setwatchlist(updatedlist);
+  };
+
   return (
     <BrowserRouter>
       <Navbar /> 
